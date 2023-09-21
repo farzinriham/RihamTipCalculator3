@@ -13,10 +13,12 @@ public class RihamTipCalculator {
         double userInput = 0;
         double totalCost = 0;
         String userAns = "";
-        while (userAns == "none") {
+        while (userAns == "no") {
             System.out.println("What is the item you wish to order? Please type in dollars and cents, eg. 12.50 (-1 if you finish ordering).");
             userInput = scan.nextDouble();
             totalCost += userInput;
+            System.out.println("Do you wish to order more? Type no if not.");
+            userAns = scan.nextLine();
         }
         System.out.println("test totalCost: " + totalCost);
     }
