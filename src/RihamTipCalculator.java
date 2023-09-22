@@ -20,6 +20,6 @@ public class RihamTipCalculator {
             System.out.println("Do you wish to order? Type -1 if not.");
             userAns = scan.nextInt();
         }
-        System.out.println("test totalCost: " + totalCost);
+        System.out.println("Total Bill Before Tip: " + totalCost);
     }
 }
