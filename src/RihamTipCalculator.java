@@ -17,9 +17,12 @@ public class RihamTipCalculator {
             System.out.println("What is the item you wish to order? Please type in dollars and cents, eg. 12.50 (-1 if you finish ordering).");
             userInput = scan.nextDouble();
             totalCost += userInput;
-            System.out.println("Do you wish to order? Type -1 if not.");
+            System.out.println("Do you wish to continue ordering? Type 1 to continue, or -1 if not.");
             userAns = scan.nextInt();
         }
         System.out.println("Total Bill Before Tip: " + totalCost);
+        double tipDecimal = tipPercent/100;
+        double totalTip = tipDecimal*totalCost;
+        System.out.println("Total Tip: " + totalTip);
     }
 }
