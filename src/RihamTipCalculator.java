@@ -21,8 +21,11 @@ public class RihamTipCalculator {
             userAns = scan.nextInt();
         }
         System.out.println("Total Bill Before Tip: " + totalCost);
+        System.out.println("Tip Percentage: " + tipPercent + "%");
         double tipDecimal = tipPercent/100;
         double totalTip = tipDecimal*totalCost;
-        System.out.println("Total Tip: " + totalTip);
+        System.out.println("Total Tip: $" + totalTip);
+        double newBill = totalCost+totalTip;
+        System.out.println("Total Bill With Tip: $" + newBill);
     }
 }
