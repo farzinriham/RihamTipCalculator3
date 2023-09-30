@@ -27,5 +27,7 @@ public class RihamTipCalculator {
         System.out.println("Total Tip: $" + totalTip);
         double newBill = totalCost+totalTip;
         System.out.println("Total Bill With Tip: $" + newBill);
+        double perPersonOld = totalCost/groupAmount;
+        System.out.println("Per Person Cost Before Tip: " + perPersonOld);
     }
 }
