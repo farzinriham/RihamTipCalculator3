@@ -1,3 +1,10 @@
+/* Name: Farzin Riham
+Teacher: Mr Miller
+Unit 1 Tip Calculator Project
+Sources:
+    -Rounding: https://stackoverflow.com/questions/8825209/rounding-decimal-points
+*/
+
 import java.util.Scanner;
 
 public class RihamTipCalculator {
@@ -20,14 +27,24 @@ public class RihamTipCalculator {
             System.out.println("Do you wish to continue ordering? Type 1 to continue, or -1 if not.");
             userAns = scan.nextInt();
         }
-        System.out.println("Total Bill Before Tip: " + totalCost);
+        double totalCostRound = Math.round(totalCost * 100.0) / 100.0;
+        System.out.println("Total Bill Before Tip: $" + totalCost);
         System.out.println("Tip Percentage: " + tipPercent + "%");
         double tipDecimal = tipPercent/100;
         double totalTip = tipDecimal*totalCost;
-        System.out.println("Total Tip: $" + totalTip);
+        double totalTipRound = Math.round(totalTip * 100.0) / 100.0;
+        System.out.println("Total Tip: $" + totalTipRound);
         double newBill = totalCost+totalTip;
-        System.out.println("Total Bill With Tip: $" + newBill);
+        double newBillRound = Math.round(newBill * 100.0) / 100.0;
+        System.out.println("Total Bill With Tip: $" + newBillRound);
         double perPersonOld = totalCost/groupAmount;
-        System.out.println("Per Person Cost Before Tip: " + perPersonOld);
+        double perPersonORound = Math.round(perPersonOld * 100.0) / 100.0;
+        System.out.println("Per Person Cost Before Tip: $" + perPersonORound);
+        double perPersonTip = totalTip/groupAmount;
+        double perPersonTRound = Math.round(perPersonTip * 100.0) / 100.0;
+        System.out.println("Per Person Tip: $" + perPersonTRound);
+        double perPersonNewCost = newBill/groupAmount;
+        double perPersonNCRound = Math.round(perPersonNewCost * 100.0) / 100.0;
+        System.out.println("Total Cost Per Person: $" + perPersonNCRound);
     }
 }
