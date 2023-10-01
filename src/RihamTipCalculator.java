@@ -46,5 +46,13 @@ public class RihamTipCalculator {
         double perPersonNewCost = newBill/groupAmount;
         double perPersonNCRound = Math.round(perPersonNewCost * 100.0) / 100.0;
         System.out.println("Total Cost Per Person: $" + perPersonNCRound);
+        System.out.print("Please enter your credit card's budget (not ur credit card number, don't get robbed stupid): ");
+        double userBudget = scan.nextDouble();
+        if (userBudget < newBillRound) {
+            System.out.println("GET OUT OF MY RESTAURANT YOU BROKE LOSER! AND GET A JOB!");
+        } else {
+            System.out.println("Transaction successful! Your meal will be prepared in 10 seconds..."); //How do I add wait commands in java?
+            System.out.println("Enjoy your meal!");
+        }
     }
 }
