@@ -3,16 +3,19 @@ Teacher: Mr Miller
 Unit 1 Tip Calculator Project
 Sources:
     -Rounding: https://stackoverflow.com/questions/8825209/rounding-decimal-points
+    -Lists: https://stackoverflow.com/questions/13395114/how-to-initialize-liststring-object-in-java
 */
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class RihamTipCalculator {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Welcome to the Everything Restaurant!");
-        System.out.println("I am your Tip Calculator for today!");
-        System.out.println("How many people do we have dining on this fine day?");
+        System.out.print("Welcome to the Everything Restaurant!");
+        System.out.print("I am your Tip Calculator for today!");
+        System.out.print("How many people do we have dining on this fine day?");
         int groupAmount = scan.nextInt();
         System.out.println("Please enter the tip percentage for today. (0-100)");
         double tipPercent = scan.nextDouble();
@@ -20,8 +23,13 @@ public class RihamTipCalculator {
         double userInput = 0;
         double totalCost = 0;
         int userAns = 0;
+        String userItem = " ";
+        List<String> itemNames = new ArrayList<>();
         while (userAns != -1) {
             System.out.println("What is the item you wish to order? Please type in dollars and cents, eg. 12.50 (-1 if you finish ordering).");
+            userItem = scan.nextLine();
+            itemNames.add(userItem);
+            System.out.println("Please type the price in dollars and cents, eg. 12.50 (-1 if you finish ordering).");
             userInput = scan.nextDouble();
             totalCost += userInput;
             System.out.println("Do you wish to continue ordering? Type 1 to continue, or -1 if not.");
