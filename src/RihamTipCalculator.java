@@ -49,6 +49,7 @@ public class RihamTipCalculator {
             System.out.print("Do you wish to continue ordering? Type 1 to continue, or -1 if not.");
             userAns = scan.nextInt();
         }
+
         System.out.println(" ");
         System.out.println("~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~");
         System.out.println(" ");
